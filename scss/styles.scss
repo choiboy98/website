@@ -1,46 +1,106 @@
 .container {
     position: relative;
-
+    
     img {
       top: 50%;
-      left: 25%;
-      transform: translate(-25%, 50%);
+      left: 27.75%;
+      transform: translate(-12.5%, 50%);
       width: 25em;
       height: auto;
       position: absolute;
       animation-name: crossfade;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
-      animation-duration: 8s;
+      animation-duration: 12s;
       &:nth-of-type(1) {
-        animation-delay: 6s;
+        animation-delay: 9s;
       }
       &:nth-of-type(2) {
-        animation-delay: 4s;
+        animation-delay: 6s;
       }
       &:nth-of-type(3) {
-        animation-delay: 2s;
+        animation-delay: 3s;
       }
       &:nth-of-type(4) {
         animation-delay: 0;
       }
     }
+}
+
+@keyframes crossfade {
+  0% {
+    opacity:1;
   }
-  
-  @keyframes crossfade {
-    0% {
-      opacity:1;
-    }
-    17% {
-      opacity:1;
-    }
-    25% {
-      opacity:0;
-    }
-    92% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+#right-side {
+  width: 0;
+  padding: 0;
+  margin: 0;
+  right: -25%;
+  position: relative;
+  transform: translate(32.25em, 35em);
+}
+
+.nav-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+  font-size: 15px;
+  width: auto;
+}
+
+.active-nav a {
+  color: black !important;
+}
+
+.menu .nav-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-wrapper a:hover {
+  color: black;
+}
+
+.spacer {
+  height: 10vh;
+  width: auto;
+  background-color: #8a8a8a;
+
+}
+
+.menu {
+  top: 49vh;
+  text-decoration: none;
+}
+
+.other:active {
+  animation-name: moveleft;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+@keyframes moveleft {
+  0% {
+    top: 55vh;
+  }
+  100% {
+    top: 25vh;
+  }
   }
